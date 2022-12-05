@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="border: 2px solid #000  ;">
+    <h1> This is the head</h1>
+    <p> This is where we can put our content body</p>
+
+    {% for item_list in list_of_values %}
+    {% include 'personal/snippets/body_snippet.html' with value=item_list %}
+
+    {% endfor %}
+    
+
+
+</div>
+
+{% endblock content %}
