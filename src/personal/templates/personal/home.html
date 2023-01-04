@@ -6,7 +6,7 @@
     <p> This is where we can put our content body</p>
     
     {% for account in accounts %}
-    <p> {{ account }} </p>
+    <p> {{ account.username }} | {{ account.email }} | {{ account.date_joined }} </p>
     {% endfor %}
     
 
