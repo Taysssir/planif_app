@@ -2,10 +2,18 @@
 <html lang="en">
 
 <head>
-    <div style="border: 2px solid #000  ;">
-        <title> This is the header </title>
-        <h1> This is the header </h1>
-    </div>
+    <title> This is the header </title>
+
+    {% if request.user.is_authenticated %}
+
+        <p>Hello, {{request.user.username}} | <a href="{% url 'logout' %}">Logout</a> </p>
+
+    {% else %}
+
+        <p><a href="{% url 'register' %}">Register</a></p>
+
+    {% endif %}
+    <hr>
 </head>
 
 <body>
@@ -14,9 +22,8 @@
 </body>
 
 <footer>
-    <div style="border: 2px solid #000  ;">
-        <h3> This is the footer </h3>
-    </div>
+    <hr>
+    <p> AGENDA PLANNER | 2023 </p>
 </footer>
 
 </html>
