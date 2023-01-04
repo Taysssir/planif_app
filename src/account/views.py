@@ -22,3 +22,8 @@ def registration_view(request):
 		form = RegistrationForm()
 		context['registration_form'] = form
 	return render(request, 'account/register.html', context)
+
+# Logout Feature
+def logout_view(request):
+	logout(request)
+	return redirect('/')

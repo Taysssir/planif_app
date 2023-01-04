@@ -1,16 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div style="border: 2px solid #000;">
-    <h1> This is the head</h1>
-    <p> This is where we can put our content body</p>
+    <h3> Registred Users : </h3>
     
     {% for account in accounts %}
     <p> {{ account.username }} | {{ account.email }} | {{ account.date_joined }} </p>
     {% endfor %}
     
-
-
-</div>
-
 {% endblock content %}
