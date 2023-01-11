@@ -35,6 +35,7 @@ urlpatterns = [
     path('login/', login_view, name="login"),
     path('account/', account_view, name="account"),
     path('must_authenticate/', must_authenticate_view, name="must_authenticate"),
+    path('blog/', include('blog.urls', 'blog')),
 
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
         name='password_change_done'),
